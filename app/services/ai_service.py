@@ -1,6 +1,6 @@
 import os
 import logging
-import google.genai as genai
+import google.generativeai as genai
 
 logger = logging.getLogger(__name__)
 
