@@ -7,3 +7,4 @@ google-ai-generativelanguage==0.6.15
 google-auth==2.49.1
 google-api-core==2.30.0
 httpx==0.28.1
+reportlab==4.4.10
