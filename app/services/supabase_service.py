@@ -4,12 +4,12 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Configuración de variables desde el entorno (.env)
-SUPABASE_URL = os.environ.get("SUPABASE_URL")
-SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
-
 def get_supabase_client() -> Client:
-    return create_client(SUPABASE_URL, SUPABASE_KEY)
+    supabase_url = os.environ.get("SUPABASE_URL")
+    supabase_key = os.environ.get("SUPABASE_KEY")
+    if not supabase_url or not supabase_key:
+        raise ValueError("Variables SUPABASE_URL y/o SUPABASE_KEY no están configuradas.")
+    return create_client(supabase_url, supabase_key)
 
 from typing import Optional
 

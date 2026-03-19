@@ -70,7 +70,7 @@ async def fetch_documents():
     """
     try:
         documents = get_all_documents()
-        return {"data": documents}
+        return documents
     except Exception as e:
         logger.error(f"Error fetching documents: {str(e)}")
         raise HTTPException(status_code=500, detail="Error al obtener los documentos.")
