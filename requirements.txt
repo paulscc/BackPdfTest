@@ -2,10 +2,8 @@ fastapi==0.135.1
 uvicorn==0.22.0
 python-dotenv==1.2.1
 pydantic==2.11.7
-google-generativeai==0.8.6
-google-ai-generativelanguage==0.6.15
-google-auth==2.49.1
-google-api-core==2.30.0
+pydantic-settings
+google-genai  # <--- Este es el paquete correcto para 'from google import genai'
 httpx==0.28.1
 reportlab==4.4.10
 supabase==2.11.0
